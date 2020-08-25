@@ -18,22 +18,6 @@ string
 string
 -
 
-../include/processor.h
-
-/home/yananzhang/workspace/CppND-System-Monitor-yananzhang-solution/src/linux_parser.cpp
-dirent.h
--
-unistd.h
--
-string
--
-vector
--
-linux_parser.h
-/home/yananzhang/workspace/CppND-System-Monitor-yananzhang-solution/src/linux_parser.h
-iomanip
--
-
 /home/yananzhang/workspace/CppND-System-Monitor-yananzhang-solution/src/process.cpp
 unistd.h
 -
@@ -49,12 +33,4 @@ process.h
 /home/yananzhang/workspace/CppND-System-Monitor-yananzhang-solution/src/process.h
 linux_parser.h
 /home/yananzhang/workspace/CppND-System-Monitor-yananzhang-solution/src/linux_parser.h
-
-/home/yananzhang/workspace/CppND-System-Monitor-yananzhang-solution/src/processor.cpp
-processor.h
-/home/yananzhang/workspace/CppND-System-Monitor-yananzhang-solution/src/processor.h
-linux_parser.h
-/home/yananzhang/workspace/CppND-System-Monitor-yananzhang-solution/src/linux_parser.h
-unistd.h
--
 

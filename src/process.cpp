@@ -23,7 +23,7 @@ float Process::CpuUtilization() {
     long seconds = upTime - startTime;
     if(seconds == 0) {return 0;}
     long total = LinuxParser::ActiveJiffies(pid_);
-    float cpuUsage = 100 * (total / float(seconds));
+    float cpuUsage = 100 * (float(total) / float(seconds));
 
     return cpuUsage; 
 }
