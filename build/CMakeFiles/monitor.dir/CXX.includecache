@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-../include/format.h
-string
--
-
 ../include/linux_parser.h
 fstream
 -
@@ -18,35 +14,11 @@ regex
 string
 -
 
-../include/ncurses_display.h
-curses.h
--
-process.h
-../include/process.h
-system.h
-../include/system.h
-
 ../include/process.h
 string
 -
 
 ../include/processor.h
-
-../include/system.h
-string
--
-vector
--
-process.h
-../include/process.h
-processor.h
-../include/processor.h
-
-/home/yananzhang/workspace/CppND-System-Monitor-yananzhang-solution/src/format.cpp
-string
--
-format.h
-/home/yananzhang/workspace/CppND-System-Monitor-yananzhang-solution/src/format.h
 
 /home/yananzhang/workspace/CppND-System-Monitor-yananzhang-solution/src/linux_parser.cpp
 dirent.h
@@ -59,30 +31,8 @@ vector
 -
 linux_parser.h
 /home/yananzhang/workspace/CppND-System-Monitor-yananzhang-solution/src/linux_parser.h
-
-/home/yananzhang/workspace/CppND-System-Monitor-yananzhang-solution/src/main.cpp
-ncurses_display.h
-/home/yananzhang/workspace/CppND-System-Monitor-yananzhang-solution/src/ncurses_display.h
-system.h
-/home/yananzhang/workspace/CppND-System-Monitor-yananzhang-solution/src/system.h
-
-/home/yananzhang/workspace/CppND-System-Monitor-yananzhang-solution/src/ncurses_display.cpp
-curses.h
+iomanip
 -
-chrono
--
-string
--
-thread
--
-vector
--
-format.h
-/home/yananzhang/workspace/CppND-System-Monitor-yananzhang-solution/src/format.h
-ncurses_display.h
-/home/yananzhang/workspace/CppND-System-Monitor-yananzhang-solution/src/ncurses_display.h
-system.h
-/home/yananzhang/workspace/CppND-System-Monitor-yananzhang-solution/src/system.h
 
 /home/yananzhang/workspace/CppND-System-Monitor-yananzhang-solution/src/process.cpp
 unistd.h
@@ -97,26 +47,14 @@ vector
 -
 process.h
 /home/yananzhang/workspace/CppND-System-Monitor-yananzhang-solution/src/process.h
+linux_parser.h
+/home/yananzhang/workspace/CppND-System-Monitor-yananzhang-solution/src/linux_parser.h
 
 /home/yananzhang/workspace/CppND-System-Monitor-yananzhang-solution/src/processor.cpp
 processor.h
 /home/yananzhang/workspace/CppND-System-Monitor-yananzhang-solution/src/processor.h
-
-/home/yananzhang/workspace/CppND-System-Monitor-yananzhang-solution/src/system.cpp
+linux_parser.h
+/home/yananzhang/workspace/CppND-System-Monitor-yananzhang-solution/src/linux_parser.h
 unistd.h
 -
-cstddef
--
-set
--
-string
--
-vector
--
-process.h
-/home/yananzhang/workspace/CppND-System-Monitor-yananzhang-solution/src/process.h
-processor.h
-/home/yananzhang/workspace/CppND-System-Monitor-yananzhang-solution/src/processor.h
-system.h
-/home/yananzhang/workspace/CppND-System-Monitor-yananzhang-solution/src/system.h
 

@@ -5,29 +5,43 @@
 #include <vector>
 
 #include "process.h"
+#include "linux_parser.h"
 
 using std::string;
 using std::to_string;
 using std::vector;
 
-// TODO: Return this process's ID
-int Process::Pid() { return 0; }
 
-// TODO: Return this process's CPU utilization
-float Process::CpuUtilization() { return 0; }
+// DONE: Return this process's ID
+int Process::Pid() { return pid_; }
 
-// TODO: Return the command that generated this process
-string Process::Command() { return string(); }
+// DONE: Return this process's CPU utilization
+float Process::CpuUtilization() { 
+    long startTime = LinuxParser::UpTime(pid_);
+    usleep(100000);
+    long upTime = LinuxParser::UpTime(pid_);
+    long seconds = upTime - startTime;
+    if(seconds == 0) {return 0;}
+    long total = LinuxParser::ActiveJiffies(pid_);
+    float cpuUsage = 100 * (total / float(seconds));
 
-// TODO: Return this process's memory utilization
-string Process::Ram() { return string(); }
+    return cpuUsage; 
+}
 
-// TODO: Return the user (name) that generated this process
-string Process::User() { return string(); }
+// DONE: Return the command that generated this process
+string Process::Command() { return LinuxParser::Command(pid_); }
 
-// TODO: Return the age of this process (in seconds)
-long int Process::UpTime() { return 0; }
+// DONE: Return this process's memory utilization
+string Process::Ram() { return LinuxParser::Ram(pid_); }
 
-// TODO: Overload the "less than" comparison operator for Process objects
+// DONE: Return the user (name) that generated this process
+string Process::User() { return LinuxParser::User(pid_); }
+
+// DONE: Return the age of this process (in seconds)
+long int Process::UpTime() { return LinuxParser::UpTime(pid_); }
+
+// DONE: Overload the "less than" comparison operator for Process objects
 // REMOVE: [[maybe_unused]] once you define the function
-bool Process::operator<(Process const& a[[maybe_unused]]) const { return true; }
+bool Process::operator<(Process const& a) const { 
+    return LinuxParser::Ram(pid_) > LinuxParser::Ram(a.pid_) ? true : false; 
+}
