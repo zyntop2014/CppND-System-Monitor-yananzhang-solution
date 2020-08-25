@@ -206,13 +206,9 @@ string LinuxParser::Command(int pid) {
   std::ifstream filestream(kProcDirectory + to_string(pid) + kCmdlineFilename);
   if (filestream.is_open()){
     std::getline(filestream, line);
-    if (line == "") {
-      res =  "None";
-    } else {
-      res = line;
-    }
+    return line;
   }
-  return res;
+  return "NONE";
 }
 
 // DONE: Read and return the memory used by a process
@@ -258,10 +254,6 @@ string LinuxParser::Uid(int pid) {
 string LinuxParser::User(int pid) {  
   string line, x, user,fileUid ;
   string uid = LinuxParser::Uid(pid);
-
-  if (uid == ""){
-    return "None";
-  }
 
   std::ifstream filestream(kPasswordPath);
   if (filestream.is_open()){
